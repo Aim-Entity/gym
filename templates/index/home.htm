@@ -1,0 +1,467 @@
+{% load static %} {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Our gym has hundreds of machines to build your perfect body. Come over and join our life changing gym"
+    />
+    <meta
+      name="keywords"
+      content="Health, Body, Muscle, Gym, Gym near me, Mind, Healthy"
+    />
+    <meta name="author" content="Bilal Uddin" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voltaic Gym | Build you health and mind here</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'imgs/favicon.png' %}"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero" id="hero">
+        <header>
+          <nav>
+            <h1 class="title">Voltaic</h1>
+            <img
+              src="{% static 'imgs/hamburger.svg' %}"
+              alt="Hamburger"
+              class="hamburger"
+            />
+
+            <ul>
+              <li class="nav-item home-main"><a href="#">Home</a></li>
+              <li class="nav-item benifits-main"><a href="#">Benifits</a></li>
+              <li class="nav-item beginner-main"><a href="#">Beginner</a></li>
+              <li class="nav-item payments-main"><a href="#">Payments</a></li>
+              <li class="nav-item mentor-main"><a href="#">Mentor</a></li>
+              <li class="nav-item contact-main"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="phone-ul">
+            <ul>
+              <li class="nav-item home"><a href="#">Home</a></li>
+              <li class="nav-item benifits"><a href="#">Benifits</a></li>
+              <li class="nav-item beginner"><a href="#">Beginners</a></li>
+              <li class="nav-item payments"><a href="#">Payments</a></li>
+              <li class="nav-item mentor"><a href="#">Mentor</a></li>
+              <li class="nav-item contact-nav"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </header>
+
+        <div class="main-hero">
+          <img
+            src="{% static 'imgs/hero_dimmed.jpg' %}"
+            alt="Hero img"
+            class="hero-img"
+          />
+
+          <video
+            src="{% static 'imgs/video.mp4' %}"
+            class="hero-video"
+            controls
+            poster="{% static 'imgs/hero_thumbnail.jpg' %}"
+          ></video>
+
+          <div class="seperater">
+            <h2>Build Your Body With Our Gym Workouts.</h2>
+            <p>
+              Your health is as important as your mind. At Voltaic we also give
+              relaxing services such as saunas and massages.
+            </p>
+
+            <button class="hero-why-btn">Why Us?</button>
+            <button class="hero-price-btn">Our Pricing</button>
+          </div>
+          <div class="pull-up">
+            <img
+              src="{% static 'imgs/chevron.svg' %}"
+              alt="Chevron"
+              class="chev"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="about" id="about">
+        <h2>What We Do</h2>
+        <p class="about1">
+          It’s easy to join. You just have to come over to the gym and it’s easy
+          to cancel anytime. The 15 days free trial comes with the enterprise
+          kit so you know if it’s for you.
+        </p>
+
+        <div class="about-grids">
+          <div class="ag-left">
+            <img
+              src="{% static 'imgs/medkit.svg' %}"
+              alt="Health"
+              class="ag-img"
+            />
+            <h2 class="ag-title">Help Your Health</h2>
+          </div>
+
+          <div class="ag-center">
+            <img
+              src="{% static 'imgs/energy.svg' %}"
+              alt="Energy"
+              class="ag-img ag-center-img"
+            />
+            <h3 class="ag-title ag-center-title">Gym Equipment</h3>
+          </div>
+
+          <div class="ag-right">
+            <img src="{% static 'imgs/mind.svg' %}" alt="Mind" class="ag-img" />
+            <h2 class="ag-title">Relax Your Mind</hs>
+          </div>
+        </div>
+      </div>
+
+      <div class="facilities" id="facilities">
+        <img src="{% static 'imgs/court.jpg' %}" alt="Court" class="court" />
+
+        <div class="facility-inner-container">
+          <h2 class="facility-title">Our Outdoor Courts</h2>
+          <p class="facility-par">
+            Go join our outdoors court and train with our experts. You have
+            hundreds of exercise equipment at your disposal.
+          </p>
+
+          <button class="facility-btn">Join Now</button>
+        </div>
+      </div>
+
+      <div class="benifit" id="benifit">
+        <div class="benifit-back">
+          <h2 class="benifit-title">Why Join Us?</h2>
+          <p class="benifit-desc1">
+            It’s easy to join. You just have to come over to the gym and it’s
+            easy to cancel anytime. The 15 days free trial comes with the
+            enterprise kit so you know if it’s for you.
+          </p>
+
+          <p class="benifit-desc2">
+            Our trainers and mentors are experts and specilized in their field.
+            Some trainers also make videos on how you can stay in shape by
+            exercising at home.
+          </p>
+
+          <div class="tabs">
+            <div class="newcomer">
+              <span class="tab-text tab-current">Newcomer</span>
+            </div>
+
+            <div class="athlete">
+              <span class="tab-text">Athlete</span>
+            </div>
+
+            <div class="facilities-tab">
+              <span class="tab-text">Facilities</span>
+            </div>
+          </div>
+
+          <img
+            src="{% static 'imgs/dumbells.png' %}"
+            alt="dumbells"
+            class="dumbells"
+          />
+
+          <img src="{% static 'imgs/rope.png' %}" alt="rope" class="rope" />
+
+          <div class="newcomer-text current-text">
+            <p>
+              We have our facilities and trainers specilized for people who are
+              still debating whether to start build their health. You can start
+              the 15 days free trial with all the bonuses. Take advantage of all
+              our gym equipments in those 15 days.
+            </p>
+          </div>
+
+          <div class="athlete-text">
+            <p>
+              If you’re looking to go full into building your body, we have
+              dedicated machines for just you. There are mentors that can help
+              support you to build that muscle faster.
+            </p>
+          </div>
+
+          <div class="facility-text">
+            <p>
+              Our facilities include pools, courts, piches, running field and
+              machines. We also provide relaxation services like saunas and
+              massages for after the tiring workouts.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ta" id="ta1">
+        <div class="ta-container">
+          <div class="feather ben1">
+            <img
+              src="{% static 'imgs/feather.svg' %}"
+              alt="Feather"
+              class="icon"
+            />
+
+            <h3>Light Machines</h3>
+            <p>
+              If you like starting it small and build from there, you can use a
+              wide range of machines in your gym workouts.
+            </p>
+          </div>
+
+          <div class="trainer ben1">
+            <img src="{% static 'imgs/cap.svg' %}" alt="cap" class="icon" />
+
+            <h3>Trainers</h3>
+            <p>
+              Trainers are there for you so you don’t have to search online what
+              techniques is best for you. They are not one to one mentors
+            </p>
+          </div>
+
+          <img
+            src="{% static 'imgs/novice.jpg' %}"
+            alt="newcomer"
+            class="ta-hero"
+          />
+
+          <div class="dollar1 ben1">
+            <img
+              src="{% static 'imgs/dollar.svg' %}"
+              alt="trainer"
+              class="icon"
+            />
+
+            <h3>Affordable</h3>
+            <p>
+              Choose the plan that fits your situation. Level up or down when
+              ever you want.
+            </p>
+          </div>
+
+          <div class="diet ben1">
+            <img src="{% static 'imgs/leaf.svg' %}" alt="leaf" class="icon" />
+
+            <h3>A Healthy Diet</h3>
+            <p>
+              If you’re here for your health, well look no further as we give
+              tips on nutrition.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="price" id="price">
+        {% for package in packages %}
+        <div class="price-container">
+          <h3 class="price-title">{{ package.name|title }}</h3>
+          <p class="price-deal">{{ package.sub_name|title }}</p>
+
+          <hr class="price-line" />
+          <h2 class="price-number">
+            £{{ package.price }}<small class="price-month">/months</small>
+          </h2>
+          <hr class="price-line" />
+
+          {% for tick in package.tick_set.all %}
+          <div class="perk">
+            <img
+              src="{% static 'imgs/tick.svg' %}"
+              alt="tick"
+              class="perk-img"
+            />
+            <p class="perk-text">{{ tick.name|title }}</p>
+          </div>
+          {% endfor %} {% for tick in package.cross_set.all %}
+          <div class="perk">
+            <img
+              src="{% static 'imgs/cross.svg' %}"
+              alt="cross"
+              class="perk-img"
+            />
+            <p class="perk-text">{{ tick.name|title }}</p>
+          </div>
+          {% endfor %}
+
+          <button class="price-btn">Choose Plan</button>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="ta ta2" id="ta2">
+        <div class="ta-container">
+          <div class="intense ben1">
+            <img
+              src="{% static 'imgs/weight.svg' %}"
+              alt="weight"
+              class="icon"
+            />
+
+            <h3>Intense Machines</h3>
+            <p>
+              A wide variety of machines for you to take advantage of.
+            </p>
+          </div>
+
+          <div class="growth ben1">
+            <img
+              src="{% static 'imgs/growth.svg' %}"
+              alt="growth"
+              class="icon"
+            />
+
+            <h3>Constant Growth</h3>
+            <p>
+              There’s no stop with growth and grow it exponentially with our
+              gym.
+            </p>
+          </div>
+
+          <img
+            src="{% static 'imgs/athletes.jpg' %}"
+            alt="athlete"
+            class="ta-hero"
+          />
+
+          <div class="dollar2 ben1">
+            <img
+              src="{% static 'imgs/dollar.svg' %}"
+              alt="dollar"
+              class="icon"
+            />
+
+            <h3>Affordable</h3>
+            <p>
+              Choose the plan that fits your situation. Level up or down when
+              ever you want.
+            </p>
+          </div>
+
+          <div class="support ben1">
+            <img
+              src="{% static 'imgs/support.svg' %}"
+              alt="trainer"
+              class="icon"
+            />
+
+            <h3>Support</h3>
+            <p>
+              Constant support with mentors and our newsletters.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="expert" id="expert">
+        {% for mentor in mentors %}
+        <div class="expert-container">
+          <img src="{{ mentor.image.url }}" alt="expert" class="expert-img" />
+          <h3 class="expert-name">{{ mentor.name|title }}</h3>
+          <p class="expert-field">{{ mentor.role|title }}</p>
+
+          <div class="social-media">
+            <a href="{{ mentor.facebook }}">
+              <img
+                src="{% static 'imgs/facebook.svg' %}"
+                alt="facebook"
+                class="facebook"
+              />
+            </a>
+
+            <a href="{{ mentor.twitter }}">
+              <img
+                src="{% static 'imgs/twitter.svg' %}"
+                alt="twitter"
+                class="twitter"
+              />
+            </a>
+
+            <a href="{{ mentor.instagram }}">
+              <img
+                src="{% static 'imgs/instagram.svg' %}"
+                alt="instagram"
+                class="instagram"
+              />
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p class="contact-desc">
+          Decided to start our plans? Then go to our gym and get a membership.
+          If you have any questions then send us a message through our forms or
+          ring us.
+        </p>
+
+        <div class="whole-contact">
+          <form method="POST">
+            {% csrf_token %}
+            <div class="form-container">
+              {{ contact|crispy }}
+              <button class="form-btn">Send</button>
+            </div>
+          </form>
+
+          <div class="info-container">
+            <h3 class="contact-title">Our Bradford Gym</h3>
+            <p class="contact-info">Address: 115, Gough st, bd21 h1p</p>
+            <p class="contact-info">0800 214 5252</p>
+            <p class="contact-info">0800 241 3291</p>
+            <p class="contact-info">voltaic@contact.com</p>
+            <p class="contact-info">Mon - Sun: 5AM - 1AM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <footer>
+          <h2 class="copyright">Copyright &copy; 2020 Voltaic</h2>
+          <h2>Fontawesome fonts</h2>
+          <h2>Video from videvo</h2>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"
+      integrity="sha256-5HW1hilN77unDg9wwY2mmXL1G8/hBMrYOgiB+BqsxNg="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"
+      integrity="sha256-UJt5JHwfrhok9SvTqbi6rRw2ajY0ugeYsIT2pioVDJY="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"
+      integrity="sha256-VfpswwlYKouVmlpnJW0MszMzLm9lH2yfB6ty3d1WsB4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"
+      integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="{% static 'app.js' %}"></script>
+  </body>
+</html>
